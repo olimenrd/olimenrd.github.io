@@ -1,0 +1,65 @@
+/* Disposition de la bannière : texte à gauche, photo à droite */
+.banner-layout {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4rem;
+}
+
+.banner-text {
+	flex: 1 1 auto;
+}
+
+/* Bouton sous le sous-titre (au lieu d'à côté) */
+#banner .banner-text .content {
+	display: block;
+}
+
+#banner .banner-text .content p {
+	margin: 0 0 1.5rem 0;
+}
+
+#banner .banner-text .content .actions {
+	margin: 0;
+}
+
+/* Photo avec cadre décalé */
+.banner-photo {
+	position: relative;
+	flex: 0 0 320px;
+}
+
+.banner-photo::before {
+	content: "";
+	position: absolute;
+	top: -16px;
+	left: -16px;
+	right: 16px;
+	bottom: 16px;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 1.5rem;
+}
+
+.banner-photo img {
+	position: relative;
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	border-radius: 1.5rem;
+	box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.35);
+}
+
+/* Écrans de tablette et de téléphone : photo sous le texte, plus petite */
+@media screen and (max-width: 980px) {
+	.banner-layout {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 3rem;
+	}
+
+	.banner-photo {
+		flex: none;
+		width: 220px;
+	}
+}
