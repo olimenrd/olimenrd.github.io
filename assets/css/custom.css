@@ -63,3 +63,10 @@
 		width: 220px;
 	}
 }
+
+/* Aligne le bouton avec le texte */
+#banner .banner-text .content .actions,
+#banner .banner-text .content .actions li {
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
