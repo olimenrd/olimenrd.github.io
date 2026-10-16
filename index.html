@@ -9,6 +9,9 @@
 		<title>Olivier Ménard - Étudiant à la maîtrise en études internationales</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script>
+			try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark'); } catch (e) {}
+		</script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -24,7 +27,15 @@
 						<div class="header-tools">
 							<a href="index.html" class="lang-btn active">FR</a>
 							<a href="index-en.html" class="lang-btn">EN</a>
-							<button id="theme-toggle" type="button" aria-label="Basculer entre mode clair et sombre">☾</button>
+							<button id="theme-toggle" type="button" aria-label="Basculer entre mode clair et sombre">
+								<svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+								</svg>
+								<svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<circle cx="12" cy="12" r="4.5"/>
+									<path d="M12 1.5v2.5M12 20v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M1.5 12H4M20 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"/>
+								</svg>
+							</button>
 						</div>
 						<nav>
 							<a href="#menu">Menu</a>
@@ -201,6 +212,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
 
 	</body>
 </html>
