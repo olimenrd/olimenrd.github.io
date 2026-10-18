@@ -1,3 +1,16 @@
+/* Choix de police pour le texte */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body,
+input,
+select,
+textarea,
+button,
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
 /* Disposition de la bannière : texte à gauche, photo à droite */
 .banner-layout {
 	display: flex;
@@ -129,4 +142,10 @@ html.dark #theme-toggle .theme-moon {
 
 html.dark #theme-toggle .theme-sun {
 	display: block;
+}
+
+#banner h1 {
+	font-weight: 800;
+	text-transform: none;
+	letter-spacing: -0.02em;
 }
